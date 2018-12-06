@@ -1,6 +1,6 @@
 ﻿using MvvmCross.Commands;
 using MvvmCross.ViewModels;
-
+using System;
 
 namespace Phonebook.Core.ViewModels
 {
@@ -9,7 +9,8 @@ namespace Phonebook.Core.ViewModels
         public IMvxCommand ResetTextCommand => new MvxCommand(ResetText);
         private void ResetText()
         {
-            Text = "Hello MvvmCross";
+            
+            Text = "Hello MvvmCross" + new Random().Next(100);
         }
 
         private string _text = "Hello MvvmCross";
