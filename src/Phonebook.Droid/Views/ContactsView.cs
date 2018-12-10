@@ -5,14 +5,13 @@ using MvvmCross.Platforms.Android.Views;
 using MvvmCross.Droid.Support.V7.AppCompat;
 namespace Phonebook.Droid.Views
 {
-    [Activity(Label = "HomeView")]
-    public class HomeView : MvxAppCompatActivity
+    [Activity(Label = "ContactsView")]
+    public class ContactsView : MvxAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-            SetContentView(Resource.Layout.HomeView);
-            // Create your application here
+            SetContentView(Resource.Layout.ContactsView);
         }
     }
 }

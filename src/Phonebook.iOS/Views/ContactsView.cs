@@ -5,17 +5,17 @@ using MvvmCross.Platforms.Ios.Views;
 namespace Phonebook.iOS.Views
 {
     [MvxRootPresentation(WrapInNavigationController = true)]
-    public partial class HomeView : MvxViewController
+    public partial class ContactsView : MvxViewController
     {
-        public HomeView() : base("HomeView", null)
+        public ContactsView() : base("ContactsView", null)
         {
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var set = this.CreateBindingSet<HomeView, Core.ViewModels.HomeViewModel>();
-                set.Bind(TextField).To(vm => vm.Text);
+            var set = this.CreateBindingSet<ContactsView, Core.ViewModels.ContactsViewModel>();
+                set.Bind(Label).To(vm => vm.Text);
                 set.Bind(Button).To(vm => vm.ResetTextCommand);
                 set.Apply();
         }

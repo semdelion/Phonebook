@@ -24,6 +24,7 @@ namespace Phonebook.Droid
     {
         public SplashScreen(): base(Resource.Layout.SplashScreen)
         {
+
         }
     }
     

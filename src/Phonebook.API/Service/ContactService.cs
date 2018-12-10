@@ -6,7 +6,7 @@ using Phonebook.API.Models;
 
 namespace Phonebook.API.Service
 {
-    class ContactService : BaseServise, IContactService
+    public class ContactService : BaseServiсe, IContactService
     {
         public ContactService(IConnectionService connectionService) : base(connectionService){}
 

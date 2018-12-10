@@ -5,19 +5,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
 	android:background="#ccbbff">
-	<TextView
-		android:text="Text"
-		local:MvxBind="Text Text"
-		android:textSize="30dp"
-		android:layout_width="match_parent"
-		android:layout_height="76.0dp"
-		android:id="@+id/textView1" />
 	<Button
+		local:MvxBind="Click ResetTextCommand"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="Reset"
+		android:text="Get Data"
 		android:textSize="30dp"
-		local:MvxBind="Text Text; Click ResetTextCommand"
 		android:layout_marginRight="50.0dp"
 		android:layout_marginLeft="50.0dp" />
+	<TextView
+		local:MvxBind			="Text Text"
+		android:textSize		="25dp"
+		android:layout_width	="match_parent"
+		android:layout_height	="wrap_content"
+		android:id="@+id/textView1" />
 </LinearLayout>

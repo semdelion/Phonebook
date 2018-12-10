@@ -6422,14 +6422,14 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f09003b
 			public const int collapseActionView = 2131296315;
 			
-			// aapt resource value: 0x7f09008f
-			public const int container = 2131296399;
+			// aapt resource value: 0x7f090090
+			public const int container = 2131296400;
 			
 			// aapt resource value: 0x7f090068
 			public const int contentPanel = 2131296360;
 			
-			// aapt resource value: 0x7f090090
-			public const int coordinator = 2131296400;
+			// aapt resource value: 0x7f090091
+			public const int coordinator = 2131296401;
 			
 			// aapt resource value: 0x7f09006f
 			public const int custom = 2131296367;
@@ -6443,20 +6443,20 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f090062
 			public const int default_activity_button = 2131296354;
 			
-			// aapt resource value: 0x7f090092
-			public const int design_bottom_sheet = 2131296402;
+			// aapt resource value: 0x7f090093
+			public const int design_bottom_sheet = 2131296403;
+			
+			// aapt resource value: 0x7f09009a
+			public const int design_menu_item_action_area = 2131296410;
 			
 			// aapt resource value: 0x7f090099
-			public const int design_menu_item_action_area = 2131296409;
+			public const int design_menu_item_action_area_stub = 2131296409;
 			
 			// aapt resource value: 0x7f090098
-			public const int design_menu_item_action_area_stub = 2131296408;
+			public const int design_menu_item_text = 2131296408;
 			
 			// aapt resource value: 0x7f090097
-			public const int design_menu_item_text = 2131296407;
-			
-			// aapt resource value: 0x7f090096
-			public const int design_navigation_view = 2131296406;
+			public const int design_navigation_view = 2131296407;
 			
 			// aapt resource value: 0x7f090022
 			public const int disableHome = 2131296290;
@@ -6530,8 +6530,8 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f090000
 			public const int item_touch_helper_previous_elevation = 2131296256;
 			
-			// aapt resource value: 0x7f09008e
-			public const int largeLabel = 2131296398;
+			// aapt resource value: 0x7f09008f
+			public const int largeLabel = 2131296399;
 			
 			// aapt resource value: 0x7f09004b
 			public const int left = 2131296331;
@@ -6566,8 +6566,8 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f09002a
 			public const int multiply = 2131296298;
 			
-			// aapt resource value: 0x7f090095
-			public const int navigation_header_container = 2131296405;
+			// aapt resource value: 0x7f090096
+			public const int navigation_header_container = 2131296406;
 			
 			// aapt resource value: 0x7f09003d
 			public const int never = 2131296317;
@@ -6689,14 +6689,14 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f090027
 			public const int showTitle = 2131296295;
 			
-			// aapt resource value: 0x7f09008d
-			public const int smallLabel = 2131296397;
+			// aapt resource value: 0x7f09008e
+			public const int smallLabel = 2131296398;
+			
+			// aapt resource value: 0x7f090095
+			public const int snackbar_action = 2131296405;
 			
 			// aapt resource value: 0x7f090094
-			public const int snackbar_action = 2131296404;
-			
-			// aapt resource value: 0x7f090093
-			public const int snackbar_text = 2131296403;
+			public const int snackbar_text = 2131296404;
 			
 			// aapt resource value: 0x7f090045
 			public const int snap = 2131296325;
@@ -6746,11 +6746,11 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f09006b
 			public const int textSpacerNoTitle = 2131296363;
 			
-			// aapt resource value: 0x7f09009b
-			public const int textView1 = 2131296411;
+			// aapt resource value: 0x7f09008d
+			public const int textView1 = 2131296397;
 			
-			// aapt resource value: 0x7f09009a
-			public const int text_input_password_toggle = 2131296410;
+			// aapt resource value: 0x7f09009b
+			public const int text_input_password_toggle = 2131296411;
 			
 			// aapt resource value: 0x7f090014
 			public const int textinput_counter = 2131296276;
@@ -6776,8 +6776,8 @@ namespace Phonebook.Droid
 			// aapt resource value: 0x7f090070
 			public const int topPanel = 2131296368;
 			
-			// aapt resource value: 0x7f090091
-			public const int touch_outside = 2131296401;
+			// aapt resource value: 0x7f090092
+			public const int touch_outside = 2131296402;
 			
 			// aapt resource value: 0x7f09000f
 			public const int transition_current_scene = 2131296271;
@@ -6950,49 +6950,49 @@ namespace Phonebook.Droid
 			public const int abc_select_dialog_material = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int design_bottom_navigation_item = 2130968602;
+			public const int ContactsView = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int design_bottom_sheet_dialog = 2130968603;
+			public const int design_bottom_navigation_item = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int design_layout_snackbar = 2130968604;
+			public const int design_bottom_sheet_dialog = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_layout_snackbar_include = 2130968605;
+			public const int design_layout_snackbar = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_layout_tab_icon = 2130968606;
+			public const int design_layout_snackbar_include = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_tab_text = 2130968607;
+			public const int design_layout_tab_icon = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_menu_item_action_area = 2130968608;
+			public const int design_layout_tab_text = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_navigation_item = 2130968609;
+			public const int design_menu_item_action_area = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_navigation_item_header = 2130968610;
+			public const int design_navigation_item = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_navigation_item_separator = 2130968611;
+			public const int design_navigation_item_header = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item_subheader = 2130968612;
+			public const int design_navigation_item_separator = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_menu = 2130968613;
+			public const int design_navigation_item_subheader = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_menu_item = 2130968614;
+			public const int design_navigation_menu = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_text_input_password_icon = 2130968615;
+			public const int design_navigation_menu_item = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int HomeView = 2130968616;
+			public const int design_text_input_password_icon = 2130968616;
 			
 			// aapt resource value: 0x7f040029
 			public const int notification_action = 2130968617;

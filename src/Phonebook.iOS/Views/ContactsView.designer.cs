@@ -12,7 +12,7 @@ using UIKit;
 namespace Phonebook.iOS.Views
 {
     [Register ("HomeView")]
-    partial class HomeView
+    partial class ContactsView
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -20,7 +20,7 @@ namespace Phonebook.iOS.Views
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField TextField { get; set; }
+        UIKit.UILabel Label { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -29,9 +29,9 @@ namespace Phonebook.iOS.Views
                 Button = null;
             }
 
-            if (TextField != null) {
-                TextField.Dispose ();
-                TextField = null;
+            if (Label != null) {
+                Label.Dispose ();
+                Label = null;
             }
         }
     }

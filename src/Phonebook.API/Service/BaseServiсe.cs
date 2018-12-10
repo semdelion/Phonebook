@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Phonebook.API.Service
 {
-    abstract class BaseServise
+    public abstract class BaseServiсe
     {
         IConnectionService ConnectionService { get;}
-        protected BaseServise(IConnectionService connectionService) 
+        protected BaseServiсe(IConnectionService connectionService) 
         {
             ConnectionService = connectionService;
         }

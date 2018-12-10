@@ -16,7 +16,7 @@ namespace Phonebook.iOS
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
-            Mvx.IoCProvider.RegisterSingleton<IConnectionService>(() => new ConnectionService(new HttpClientHandler()));
+            Mvx.IoCProvider.RegisterSingleton<IConnectionService>(() => new ConnectionService(new NSUrlSessionHandler()));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Phonebook.API.Service
 {
-    interface IContactService
+    public interface IContactService
     {
         Task<ContactResult> GetContacts(int count, int page);
     }
