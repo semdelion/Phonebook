@@ -1,38 +1,31 @@
-﻿// WARNING
-//
-// This file has been generated automatically by Visual Studio from the outlets and
-// actions declared in your storyboard file.
-// Manual changes to this file will not be maintained.
+﻿//
+// This file has been generated automatically by Visual Studio to store outlets and
+// actions made in the Xcode designer. If it is removed, they will be lost.
+// Manual changes to this file may not be handled correctly.
 //
 using Foundation;
-using System;
 using System.CodeDom.Compiler;
-using UIKit;
 
 namespace Phonebook.iOS.Views
 {
-    [Register ("HomeView")]
+    [Register("ContactsView")]
     partial class ContactsView
     {
         [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton Button { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel Label { get; set; }
-
-        void ReleaseDesignerOutlets ()
+        [GeneratedCode("iOS Designer", "1.0")]
+        UIKit.UITableView TableView { get; set; }
+        void ReleaseDesignerOutlets()
         {
-            if (Button != null) {
-                Button.Dispose ();
-                Button = null;
-            }
-
-            if (Label != null) {
-                Label.Dispose ();
-                Label = null;
+            if (TableView != null)
+            {
+                TableView.Dispose();
+                TableView = null;
             }
         }
     }
 }
+
+
+
+
+    

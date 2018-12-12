@@ -1,23 +1,36 @@
-﻿using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platforms.Ios.Presenters.Attributes;
+﻿using System;
+using System.Drawing;
+
+using Foundation;
+using MvvmCross.Binding.BindingContext;
+using MvvmCross.Platforms.Ios.Binding.Views;
 using MvvmCross.Platforms.Ios.Views;
+using Phonebook.Core.ViewModels;
+using UIKit;
 
 namespace Phonebook.iOS.Views
 {
-    [MvxRootPresentation(WrapInNavigationController = true)]
-    public partial class ContactsView : MvxViewController
+    public partial class ContactsView : MvxViewController<ContactsViewModel>
     {
-        public ContactsView() : base("ContactsView", null)
+
+        public ContactsView(): base(nameof(ContactsView), null)
         {
         }
 
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            var set = this.CreateBindingSet<ContactsView, Core.ViewModels.ContactsViewModel>();
-                set.Bind(Label).To(vm => vm.Text);
-                set.Bind(Button).To(vm => vm.ResetTextCommand);
-                set.Apply();
+            NavigationItem.Title = "Phonebook";
+
+            var source = new MvxSimpleTableViewSource(TableView, "ContactRow", ContactRow.Key);
+            TableView.RowHeight = 80;
+
+            var set = this.CreateBindingSet<ContactsView, ContactsViewModel>();
+            set.Bind(source).To(vm => vm.Items);
+            set.Apply();
+
+            TableView.Source = source;
+            TableView.ReloadData();
         }
     }
 }

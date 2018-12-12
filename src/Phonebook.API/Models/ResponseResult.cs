@@ -9,8 +9,9 @@ namespace Phonebook.API.Models
     public class ResponseResult
     {
         public string Url { get; set; }
-        public HttpStatusCode StatusCode { get; set; }
         public HttpContent Content { get; set; }
+        public HttpStatusCode StatusCode { get; set; }
+        
 
     }
 }

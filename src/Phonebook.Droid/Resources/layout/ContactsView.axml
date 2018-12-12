@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:local="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-	android:background="#ccbbff">
-	<Button
-		local:MvxBind="Click ResetTextCommand"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
-		android:text="Get Data"
-		android:textSize="30dp"
-		android:layout_marginRight="50.0dp"
-		android:layout_marginLeft="50.0dp" />
-	<TextView
-		local:MvxBind			="Text Text"
-		android:textSize		="25dp"
-		android:layout_width	="match_parent"
-		android:layout_height	="wrap_content"
-		android:id="@+id/textView1" />
+<LinearLayout 
+	xmlns:android			="http://schemas.android.com/apk/res/android"
+    xmlns:local				="http://schemas.android.com/apk/res-auto"
+    android:orientation		="vertical"
+    android:layout_width	="match_parent"
+    android:layout_height	="match_parent"
+	android:background		="#607d8b">
+    <android.support.v7.widget.Toolbar
+        android:id				="@+id/ContactsViewToolbar"
+		android:background		="@drawable/bar" 
+        android:layout_height	="80dp"
+        android:layout_width	="match_parent">
+		<TextView
+			android:text			="Phonebook"
+			android:textColor		="@android:color/white"
+			android:textSize		="25dp"
+			android:gravity			="center"
+			android:paddingBottom	="12dp"
+			android:layout_width	="match_parent"
+			android:layout_height	="match_parent"
+		/>
+	</android.support.v7.widget.Toolbar>
+    <MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout
+		local:MvxBind			="RefreshCommand RefreshContactsCommand; Refreshing IsRefreshing"
+        android:layout_height	="match_parent"
+        android:layout_width	="match_parent">
+        <MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+			local:MvxBind			="ItemsSource Items; ItemClick ItemSelectedCommand"
+			local:MvxItemTemplate	="@layout/contact_item"
+			android:id				="@+id/recyclerView"
+			android:orientation		="vertical"
+			android:layout_width	="match_parent"
+			android:layout_height	="match_parent"
+		/>
+    </MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout>
 </LinearLayout>
+

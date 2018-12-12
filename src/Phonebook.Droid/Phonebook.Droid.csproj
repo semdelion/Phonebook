@@ -98,7 +98,25 @@
     <PackageReference Include="MvvmCross">
       <Version>6.2.2</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Core.UI">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Design">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.Fragment">
+      <Version>6.2.2</Version>
+    </PackageReference>
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Droid.Support.V7.RecyclerView">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.File">
+      <Version>6.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Plugin.Visibility">
       <Version>6.2.2</Version>
     </PackageReference>
     <PackageReference Include="NETStandard.Library">
@@ -107,6 +125,9 @@
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
       <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading">
+      <Version>2.4.4.859</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -131,6 +152,17 @@
     <AndroidResource Include="Resources\layout\ContactsView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\contact_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\border.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
