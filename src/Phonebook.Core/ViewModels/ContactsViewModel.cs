@@ -30,7 +30,7 @@ namespace Phonebook.Core.ViewModels
         }
 
 
-        public IMvxCommand RefreshContactsCommand => _refreshContactsCommand ?? (_refreshContactsCommand = new MvxAsyncCommand(GetContacts));
+        public IMvxCommand RefreshContactsCommand => _refreshContactsCommand ?? (_refreshContactsCommand = new MvxAsyncCommand(PullToRefresh));
         public ContactsViewModel(IMvxNavigationService navigationService, IContactService contactService)
         {
             _navigationService = navigationService;
@@ -40,18 +40,24 @@ namespace Phonebook.Core.ViewModels
 
         private async Task GetContacts()
         {
-            IsRefreshing = true;
             var contacts = await _contactService.GetContacts(SettingsConstants.CountOfContacts, SettingsConstants.CountOfPage).ConfigureAwait(false);
             foreach (var cont in contacts.Contacts)
                 Items.Add(new ViewModels.Items(cont));
+        }
+
+        private async Task PullToRefresh()
+        {
+            IsRefreshing = true;
+            Items.Clear();
+            await GetContacts();
             IsRefreshing = false;
         }
 
         public override void ViewAppeared()
         {
-            if(_items == null)
+            if (_items == null)
+                Task.Run(GetContacts);
             base.ViewAppeared();
-            Task.Run(GetContacts);
         }
     }
 }
