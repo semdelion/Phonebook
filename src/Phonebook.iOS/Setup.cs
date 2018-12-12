@@ -8,6 +8,7 @@ using Foundation;
 using MvvmCross;
 using MvvmCross.Platforms.Ios.Core;
 using Phonebook.API.Service;
+using Phonebook.Core;
 
 namespace Phonebook.iOS
 {
@@ -17,6 +18,7 @@ namespace Phonebook.iOS
         {
             base.InitializeFirstChance();
             Mvx.IoCProvider.RegisterSingleton<IConnectionService>(() => new ConnectionService(new NSUrlSessionHandler()));
+            Mvx.IoCProvider.RegisterType<IMessage>(() => new MessageiOS());
         }
     }
 }

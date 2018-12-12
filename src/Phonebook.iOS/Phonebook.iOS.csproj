@@ -171,8 +171,8 @@
     <Compile Include="LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="MessageiOS.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="ViewController.cs" />
     <Compile Include="Views\ContactRow.cs" />
     <Compile Include="Views\ContactRow.designer.cs">
       <DependentUpon>ContactRow.cs</DependentUpon>
