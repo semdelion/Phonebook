@@ -11,24 +11,9 @@ namespace Phonebook.Droid.Resources
 {
     class AdapterContacts : MvxRecyclerAdapter
     {
-        //public event EventHandler<AdapterContactsClickEventArgs> ItemClick;
-        //public event EventHandler<AdapterContactsClickEventArgs> ItemLongClick;
 
         public ICommand CommandGetContacts { get; set; }
-        public AdapterContacts(IMvxAndroidBindingContext bindingContext)
-        : base(bindingContext)
-        {
-        }
-
-        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-        {
-            var itemBindingContext = new MvxAndroidBindingContext(parent.Context, BindingContext.LayoutInflaterHolder);
-            var vh = new MvxRecyclerViewHolder(InflateViewForHolder(parent, viewType, itemBindingContext), itemBindingContext)
-            {
-                Click = ItemClick
-            };
-            return vh;
-        }
+        public AdapterContacts(IMvxAndroidBindingContext bindingContext) : base(bindingContext{}
 
         public override int GetItemViewType(int position) => ItemTemplateSelector.GetItemViewType(GetItem(position));
 
@@ -38,7 +23,19 @@ namespace Phonebook.Droid.Resources
             if (position >= ItemCount - 3 && CommandGetContacts.CanExecute(null))
                 CommandGetContacts.Execute(null);
         }
-    
+
+        //public event EventHandler<AdapterContactsClickEventArgs> ItemClick;
+        //public event EventHandler<AdapterContactsClickEventArgs> ItemLongClick;
+
+        //public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
+        //{
+        //    var itemBindingContext = new MvxAndroidBindingContext(parent.Context, BindingContext.LayoutInflaterHolder);
+        //    var vh = new MvxRecyclerViewHolder(InflateViewForHolder(parent, viewType, itemBindingContext), itemBindingContext)
+        //    {
+        //        Click = ItemClick
+        //    };
+        //    return vh;
+        //}
 
         // Replace the contents of a view (invoked by the layout manager)
         //public override void OnBindViewHolder(RecyclerView.ViewHolder viewHolder, int position)

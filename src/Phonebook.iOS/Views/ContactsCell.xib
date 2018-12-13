@@ -19,18 +19,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="144" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="144" translatesAutoresizingMaskIntoConstraints="NO">
                         <rect key="frame" x="10" y="10" width="60" height="60"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                        <constraints>
+                            <constraint id="355" firstAttribute="width" constant="60"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="180" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="180" translatesAutoresizingMaskIntoConstraints="NO">
                         <rect key="frame" x="80" y="10" width="230" height="60"/>
-                        <autoresizingMask key="autoresizingMask"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint id="338" firstItem="144" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="10"/>
+                    <constraint id="340" firstItem="144" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" constant="10"/>
+                    <constraint id="342" firstAttribute="bottom" secondItem="144" secondAttribute="bottom" constant="9"/>
+                    <constraint id="344" firstItem="180" firstAttribute="leading" secondItem="144" secondAttribute="trailing" constant="10"/>
+                    <constraint id="346" firstAttribute="trailing" secondItem="180" secondAttribute="trailing" constant="10"/>
+                    <constraint id="351" firstItem="180" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" constant="10"/>
+                    <constraint id="353" firstAttribute="bottom" secondItem="180" secondAttribute="bottom" constant="9"/>
+                </constraints>
             </tableViewCellContentView>
             <point key="canvasLocation" x="-17" y="-6"/>
         </tableViewCell>

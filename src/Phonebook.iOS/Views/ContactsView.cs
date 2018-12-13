@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Drawing;
 
 using Foundation;
@@ -12,9 +13,23 @@ namespace Phonebook.iOS.Views
 {
     public partial class ContactsView : MvxViewController<ContactsViewModel>
     {
+        private MvxUIRefreshControl _refreshControl;
 
         public ContactsView(): base(nameof(ContactsView), null)
         {
+        }
+
+        private void AddRefresh()
+        {
+            _refreshControl = new MvxUIRefreshControl();
+            if (UIDevice.CurrentDevice.CheckSystemVersion(10, 0))
+            {
+                TableView.RefreshControl = _refreshControl;
+            }
+            else
+            {
+                TableView.Add(_refreshControl);
+            }
         }
 
         public override void ViewDidLoad()
@@ -22,6 +37,8 @@ namespace Phonebook.iOS.Views
             base.ViewDidLoad();
             NavigationItem.Title = "Phonebook";
 
+
+            AddRefresh();
             var source = new MvxSimpleTableViewSource(TableView, ContactsCell.Key, ContactsCell.Key);
             TableView.RowHeight = 80;
 

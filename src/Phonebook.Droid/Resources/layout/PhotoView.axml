@@ -1,0 +1,14 @@
+<LinearLayout
+	xmlns:android			="http://schemas.android.com/apk/res/android"
+	xmlns:local				="http://schemas.android.com/apk/res-auto"
+	android:orientation		="vertical"
+	android:layout_width	="match_parent"
+	android:layout_height	="match_parent"
+	android:background		="#394d5b">
+	<ffimageloading.cross.MvxCachedImageView
+		local:MvxBind			="ImagePath Photo"
+		android:layout_width    ="match_parent"
+		android:layout_height	="match_parent"
+		android:layout_gravity	="center"
+	/>
+</LinearLayout>

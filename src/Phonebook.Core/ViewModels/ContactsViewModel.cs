@@ -11,6 +11,7 @@ namespace Phonebook.Core.ViewModels
 {
     public class ContactsViewModel : MvxViewModel
     {
+        private int page = 1;
         private MvxObservableCollection<ItemContact> _items;
         private bool _isRefreshing;
       
@@ -46,9 +47,10 @@ namespace Phonebook.Core.ViewModels
         {
             try
             {
-                var contacts = await _contactService.GetContacts(SettingsConstants.CountOfContacts, SettingsConstants.CountOfPage).ConfigureAwait(false);
+                var contacts = await _contactService.GetContacts(SettingsConstants.CountOfContacts, page).ConfigureAwait(false);
                 if (contacts != null && contacts.Contacts.Count == SettingsConstants.CountOfContacts)
                 {
+                    page++;
                     var tmp = new MvxObservableCollection<ItemContact>();
                     foreach (var cont in contacts.Contacts)
                         tmp.Add(new ItemContact(cont));
@@ -67,6 +69,7 @@ namespace Phonebook.Core.ViewModels
         private async Task PullToRefresh()
         {
             IsRefreshing = true;
+            page = 1;
             Items.Clear();
             await GetContacts();
             IsRefreshing = false;

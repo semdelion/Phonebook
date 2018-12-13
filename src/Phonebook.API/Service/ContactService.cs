@@ -12,7 +12,7 @@ namespace Phonebook.API.Service
 
         public Task<ContactResult> GetContacts(int count, int page = 1)
         {
-            return Get<ContactResult>($"{Const.URL}?results={count}&page={page}");
+            return Get<ContactResult>($"{Const.URL}?results={count}&page={page}&seed=1");
         }
     }
 }
