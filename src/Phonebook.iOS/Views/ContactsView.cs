@@ -22,7 +22,7 @@ namespace Phonebook.iOS.Views
             base.ViewDidLoad();
             NavigationItem.Title = "Phonebook";
 
-            var source = new MvxSimpleTableViewSource(TableView, "ContactRow", ContactRow.Key);
+            var source = new MvxSimpleTableViewSource(TableView, ContactsCell.Key, ContactsCell.Key);
             TableView.RowHeight = 80;
 
             var set = this.CreateBindingSet<ContactsView, ContactsViewModel>();

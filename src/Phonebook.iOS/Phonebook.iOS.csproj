@@ -163,7 +163,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
-    <InterfaceDefinition Include="Views\ContactRow.xib" />
+    <InterfaceDefinition Include="Views\ContactsCell.xib" />
     <InterfaceDefinition Include="Views\ContactsView.xib" />
   </ItemGroup>
   <ItemGroup>
@@ -173,9 +173,9 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="MessageiOS.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\ContactRow.cs" />
-    <Compile Include="Views\ContactRow.designer.cs">
-      <DependentUpon>ContactRow.cs</DependentUpon>
+    <Compile Include="Views\ContactsCell.cs" />
+    <Compile Include="Views\ContactsCell.designer.cs">
+      <DependentUpon>ContactsCell.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ContactsView.cs" />
     <Compile Include="Views\ContactsView.designer.cs">

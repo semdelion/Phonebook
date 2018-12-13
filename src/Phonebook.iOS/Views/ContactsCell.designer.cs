@@ -10,8 +10,8 @@ using System.CodeDom.Compiler;
 
 namespace Phonebook.iOS.Views
 {
-    [Register ("ContactRow")]
-    partial class ContactRow
+    [Register ("ContactsCell")]
+    partial class ContactsCell
     {
         [Outlet]
         FFImageLoading.Cross.MvxCachedImageView Image { get; set; }

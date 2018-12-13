@@ -6,14 +6,14 @@ using System.Text;
 
 namespace Phonebook.Core.ViewModels
 {
-    public class Items
+    public class ItemContact
     {
         private Contact _contact;
 
         public string Photo => $"{_contact.Photo.Thumbnail}";
         public string FullName => $"{FirstCharToUpper(_contact.Name.First)} {FirstCharToUpper(_contact.Name.Last)}";
 
-        public Items(Contact contact) => _contact = contact;
+        public ItemContact(Contact contact) => _contact = contact;
 
         private static string FirstCharToUpper(string input)
         {

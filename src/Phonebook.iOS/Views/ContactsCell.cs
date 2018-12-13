@@ -7,22 +7,22 @@ using UIKit;
 
 namespace Phonebook.iOS.Views
 {
-    public partial class ContactRow : MvxTableViewCell
+    public partial class ContactsCell : MvxTableViewCell
 
     {
-        public static readonly NSString Key = new NSString("ContactRow");
+        public static readonly NSString Key = new NSString("ContactsCell");
         public static readonly UINib Nib;
 
-        static ContactRow()
+        static ContactsCell()
         {
-            Nib = UINib.FromName("ContactRow", NSBundle.MainBundle);
+            Nib = UINib.FromName("ContactsCell", NSBundle.MainBundle);
         }
 
-        protected ContactRow(IntPtr handle) : base(handle)
+        protected ContactsCell(IntPtr handle) : base(handle)
         {
             this.DelayBind(() =>
             {
-                var set = this.CreateBindingSet<ContactRow, Items>();
+                var set = this.CreateBindingSet<ContactsCell, ItemContact>();
                 set.Bind(Title).To(vm => vm.FullName);
                 set.Bind(Image).For(i => i.ImagePath).To(vm => vm.Photo);
                 set.Apply();
