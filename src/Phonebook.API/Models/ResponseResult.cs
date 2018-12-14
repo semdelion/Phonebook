@@ -11,7 +11,5 @@ namespace Phonebook.API.Models
         public string Url { get; set; }
         public HttpContent Content { get; set; }
         public HttpStatusCode StatusCode { get; set; }
-        
-
     }
 }
