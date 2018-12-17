@@ -7,21 +7,25 @@
     android:layout_width		="match_parent"
     android:layout_height		="match_parent"
 	android:background			="#394d5b">
-    <android.support.v7.widget.Toolbar
-        android:id				="@+id/ContactsViewToolbar"
-		android:background		="@drawable/bar" 
-        android:layout_height	="80dp"
-        android:layout_width	="match_parent">
-		<TextView
-			android:text			="Phonebook"
-			android:textColor		="@android:color/white"
-			android:textSize		="25dp"
-			android:gravity			="center"
-			android:paddingBottom	="12dp"
-			android:layout_width	="match_parent"
-			android:layout_height	="match_parent"
-		/>
-	</android.support.v7.widget.Toolbar>
+	<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<android.support.v7.widget.Toolbar
+			android:id				="@+id/ContactsViewToolbar"
+			android:background		="@drawable/bar" 
+			android:layout_height	="80dp"
+			android:layout_width	="match_parent">
+			<TextView
+				android:text			="Phonebook"
+				android:textColor		="@android:color/white"
+				android:textSize		="25dp"
+				android:gravity			="center"
+				android:paddingBottom	="12dp"
+				android:layout_width	="match_parent"
+				android:layout_height	="match_parent"
+			/>
+		</android.support.v7.widget.Toolbar>
+	</android.support.design.widget.AppBarLayout>
 	<RelativeLayout
 		android:layout_width	="match_parent"
 		android:layout_height	="match_parent">
@@ -38,10 +42,6 @@
 				android:layout_height	="match_parent"
 			/>
 		</MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout>
-		<FrameLayout
-            android:id="@+id/content_frame"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </RelativeLayout>
 </Linearlayout>
 

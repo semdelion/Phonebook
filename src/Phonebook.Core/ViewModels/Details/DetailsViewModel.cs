@@ -1,9 +1,12 @@
-﻿using MvvmCross.Navigation;
+﻿using MvvmCross.Commands;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Phonebook.API.Models;
+using Phonebook.Core.ViewModels.Photo;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Phonebook.Core.ViewModels.Details
 {
@@ -14,6 +17,8 @@ namespace Phonebook.Core.ViewModels.Details
         #endregion
 
         #region Commands
+        private IMvxCommand _photoClick;
+        public IMvxCommand PhotoClick => _photoClick ?? (_photoClick = new MvxAsyncCommand(NavigateToPhoto));
         #endregion
 
         #region Properties
@@ -22,7 +27,6 @@ namespace Phonebook.Core.ViewModels.Details
             get { return _contact; }
             set { SetProperty(ref _contact, value);  }
         }
-      
         #endregion
 
         #region Services
@@ -31,10 +35,9 @@ namespace Phonebook.Core.ViewModels.Details
         #endregion
 
         #region Constructors
-        public DetailsViewModel(IMvxNavigationService navigationService/*, Contact ContactPar*/)
+        public DetailsViewModel(IMvxNavigationService navigationService)
         {
             NavigationService = navigationService;
-            //CurrentContact = new ContactDetails(ContactPar); // это ооооочень плохо выглядит. 
         }
 
         public override void Prepare(Contact parameter)
@@ -43,14 +46,10 @@ namespace Phonebook.Core.ViewModels.Details
         }
         #endregion
 
-        #region Private
-        #endregion
-
-        #region Protected
-        #endregion
-
-        #region Public
-        #endregion
+        private Task<bool> NavigateToPhoto()
+        {
+            return NavigationService.Navigate<PhotoViewModel, string>(_contact.Photo);
+        }
     }
 }
 

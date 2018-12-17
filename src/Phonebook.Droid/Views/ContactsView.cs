@@ -25,7 +25,6 @@ namespace Phonebook.Droid.Views
             
             var toolBar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.ContactsViewToolbar);
             SetSupportActionBar(toolBar);
-            //FragmentManager.
 
             var recyclerAdapter = new Phonebook.Droid.Resources.AdapterContacts((IMvxAndroidBindingContext)BindingContext);
 

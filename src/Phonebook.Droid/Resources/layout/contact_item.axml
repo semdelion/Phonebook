@@ -7,6 +7,7 @@
     android:layout_height ="80dp">
     <ffimageloading.cross.MvxCachedImageView
 		android:id				="@+id/imagelow"
+		android:src				="@drawable/abc_ab_share_pack_mtrl_alpha"
 		local:MvxBind			="ImagePath Photo"
         android:layout_width    ="60dp"
         android:layout_height	="60dp"

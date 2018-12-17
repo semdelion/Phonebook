@@ -9,11 +9,10 @@ using System.Threading.Tasks;
 
 namespace Phonebook.Core.ViewModels
 {
-    public class ContactsViewModel : MvxViewModel<Contact>
+    public class ContactsViewModel : MvxViewModel
     {
         #region Fields
         private int _page = 1;
-        private Contact _contact;
         #endregion
 
         #region Commands
@@ -101,11 +100,6 @@ namespace Phonebook.Core.ViewModels
         {
             Task.Run(PullToRefresh);
             base.ViewCreated();
-        }
-
-        public override void Prepare(Contact parameter)
-        {
-            _contact = parameter;
         }
         #endregion
     }

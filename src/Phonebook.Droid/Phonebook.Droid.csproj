@@ -62,7 +62,8 @@
     <Compile Include="MessageDroid.cs" />
     <Compile Include="Adapter\AdapterContacts.cs" />
     <Compile Include="Setup.cs" />
-    <Compile Include="Views\ConactDetailsView.cs" />
+    <Compile Include="Views\ContactDetailsView.cs" />
+    <Compile Include="Views\ContactPhoto.cs" />
     <Compile Include="Views\ContactsView.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,6 +184,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_details.axml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\fragment_photo.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
