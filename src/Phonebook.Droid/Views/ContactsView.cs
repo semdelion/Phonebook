@@ -22,12 +22,7 @@ namespace Phonebook.Droid.Views
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_contacts);
-            
-            var toolBar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.ContactsViewToolbar);
-            SetSupportActionBar(toolBar);
-
             var recyclerAdapter = new Phonebook.Droid.Resources.AdapterContacts((IMvxAndroidBindingContext)BindingContext);
-
             var set = this.CreateBindingSet<ContactsView, ContactsViewModel>();
             set.Bind(recyclerAdapter).For(x => x.CommandGetContacts).To(x => x.GettingContactsCommand);
             set.Apply();

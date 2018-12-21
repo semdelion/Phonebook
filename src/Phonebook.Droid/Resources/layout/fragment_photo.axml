@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout 
-	xmlns:android			="http://schemas.android.com/apk/res/android"
-	xmlns:local				="http://schemas.android.com/apk/res-auto"
-	android:layout_width	="match_parent"
-	android:layout_height	="match_parent"
-	android:background		="#192d3b"
-	android:paddingLeft		="20dp"
-	android:paddingRight	="20dp">
-	<ffimageloading.cross.MvxCachedImageView
-		android:id				="@+id/imagePhoto"
-		local:MvxBind			="ImagePath Photo"
-		android:layout_width    ="match_parent"
+<Linearlayout
+	xmlns:android				="http://schemas.android.com/apk/res/android"
+    xmlns:local					="http://schemas.android.com/apk/res-auto"
+    android:orientation			="vertical"
+	android:fitsSystemWindows	="true"
+    android:layout_width		="match_parent"
+    android:layout_height		="match_parent"
+	android:background			="#394d5b">
+	<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<android.support.v7.widget.Toolbar
+			android:id				="@+id/ContactsViewToolbar"
+			android:background		="@drawable/bar" 
+			android:layout_height	="80dp"
+			android:layout_width	="match_parent">
+			<TextView
+				android:text			="Phonebook"
+				android:textColor		="@android:color/white"
+				android:textSize		="25dp"
+				android:gravity			="center"
+				android:paddingBottom	="12dp"
+				android:layout_width	="match_parent"
+				android:layout_height	="match_parent"
+			/>
+		</android.support.v7.widget.Toolbar>
+	</android.support.design.widget.AppBarLayout>
+	<RelativeLayout 
+		xmlns:android			="http://schemas.android.com/apk/res/android"
+		xmlns:local				="http://schemas.android.com/apk/res-auto"
+		android:layout_width	="match_parent"
 		android:layout_height	="match_parent"
-		android:gravity			="center"
-		android:src				="@drawable/abc_ab_share_pack_mtrl_alpha"
-		android:layout_marginTop="20dp"
-		android:layout_centerVertical="false"
-		android:foregroundGravity="center_vertical" 
-	/>
-</RelativeLayout>
+		android:background		="#192d3b"
+		android:paddingLeft		="20dp"
+		android:paddingRight	="20dp">
+		<ffimageloading.cross.MvxCachedImageView
+			android:id				="@+id/imagePhoto"
+			local:MvxBind			="ImagePath Photo"
+			android:layout_width    ="match_parent"
+			android:layout_height	="match_parent"
+			android:gravity			="center"
+			android:src				="@drawable/abc_ab_share_pack_mtrl_alpha"
+			android:layout_marginTop="20dp"
+			android:layout_centerVertical="false"
+			android:foregroundGravity="center_vertical" 
+		/>
+	</RelativeLayout>
+</Linearlayout>
