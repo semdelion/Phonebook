@@ -126,7 +126,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="LinkerPleaselInclude.cs" />
@@ -135,9 +134,6 @@
       <DependentUpon>ContactsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\ContactsCell.cs" />
-    <Compile Include="Views\ContactsCell.designer.cs">
-      <DependentUpon>ContactsCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="MessageiOS.cs" />
     <Compile Include="Views\ContactsTableSource.cs" />
     <Compile Include="Views\Details\ContactDetailsViewController.cs" />
@@ -148,6 +144,8 @@
     <Compile Include="Views\Photo\PhotoViewController.designer.cs">
       <DependentUpon>PhotoViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Photo\ContactsCell.designer.cs" />
+    <Compile Include="Main.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phonebook.Core\Phonebook.Core.csproj">
