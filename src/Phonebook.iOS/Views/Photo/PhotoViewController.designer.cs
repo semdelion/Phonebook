@@ -9,20 +9,20 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Phonebook.iOS.Views
+namespace Phonebook.iOS.Views.Photo
 {
-    [Register ("ContactsView")]
-    partial class ContactsView
+    [Register ("PhotoViewController")]
+    partial class PhotoViewController
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITableView tableView { get; set; }
+        FFImageLoading.Cross.MvxCachedImageView Photo { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (tableView != null) {
-                tableView.Dispose ();
-                tableView = null;
+            if (Photo != null) {
+                Photo.Dispose ();
+                Photo = null;
             }
         }
     }

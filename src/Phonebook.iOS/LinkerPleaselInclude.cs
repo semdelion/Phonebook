@@ -10,8 +10,6 @@ using UIKit;
 
 namespace Phonebook.iOS
 {
-    // This class is never actually executed, but when Xamarin linking is enabled it does ensure types and properties
-    // are preserved in the deployed app
     [Foundation.Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {

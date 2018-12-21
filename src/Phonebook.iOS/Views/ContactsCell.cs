@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Foundation;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
@@ -23,13 +24,14 @@ namespace Phonebook.iOS.Views
             {
                 var set = this.CreateBindingSet<ContactsCell, ItemContact>();
                 set.Bind(Title).To(vm => vm.FullName);
-                set.Bind(Image).For(i => i.ImagePath).To(vm => vm.Photo);
+                set.Bind(Image).For(i => i.ImagePath).To(vm => vm.Photo);   
                 set.Apply();
             });
         }
+
+        private void DelayBind(Func<object> p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
-
-
-   
-

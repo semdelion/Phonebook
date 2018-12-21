@@ -60,7 +60,7 @@ namespace Phonebook.Core.ViewModels
 
         #region Private
         private async Task GetContacts()
-        {
+        { 
             try
             {
                 var contacts = await ContactService.GetContacts(SettingsConstants.CountOfContacts, _page).ConfigureAwait(false);

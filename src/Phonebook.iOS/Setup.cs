@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
-
-using Foundation;
 using MvvmCross;
 using MvvmCross.Platforms.Ios.Core;
 using Phonebook.API.Service;
