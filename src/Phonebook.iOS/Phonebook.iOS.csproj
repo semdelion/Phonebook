@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -119,9 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
-    <Folder Include="Views\" />
-    <Folder Include="Views\Photo\" />
-    <Folder Include="Views\Details\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.xib" />
@@ -137,8 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="LinkerPleaselInclude.cs" />
+    <Compile Include="Views\ContactsCell.designer.cs">
+      <DependentUpon>ContactsCell.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\ContactsView.cs" />
     <Compile Include="Views\ContactsView.designer.cs">
       <DependentUpon>ContactsView.cs</DependentUpon>
@@ -154,8 +155,6 @@
     <Compile Include="Views\Photo\PhotoViewController.designer.cs">
       <DependentUpon>PhotoViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Photo\ContactsCell.designer.cs" />
-    <Compile Include="Main.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phonebook.Core\Phonebook.Core.csproj">
