@@ -12,7 +12,7 @@ using Phonebook.Core;
 
 namespace Phonebook.iOS
 {
-    public class Setup : MvxIosSetup<Core.App>
+    public class Setup : MvxIosSetup<App>
     {
         protected override void InitializeFirstChance()
         {

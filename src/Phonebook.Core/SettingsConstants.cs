@@ -7,6 +7,5 @@ namespace Phonebook.Core
     public class SettingsConstants
     {
         public const int CountOfContacts = 10;
-        public const int CountOfPage = 1;
     }
 }

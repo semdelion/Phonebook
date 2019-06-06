@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	xmlns:android			="http://schemas.android.com/apk/res/android"
+	xmlns:local				="http://schemas.android.com/apk/res-auto"
+	android:layout_width	="match_parent"
+	android:layout_height	="match_parent"
+	android:background		="#192d3b"
+	android:paddingLeft		="20dp"
+	android:paddingRight	="20dp">
+	<ffimageloading.cross.MvxCachedImageView
+		android:id				="@+id/imagePhoto"
+		local:MvxBind			="ImagePath Photo"
+		android:layout_width    ="match_parent"
+		android:layout_height	="match_parent"
+		android:gravity			="center"
+		android:src				="@drawable/abc_ab_share_pack_mtrl_alpha"
+		android:layout_marginTop="20dp"
+		android:layout_centerVertical="false"
+		android:foregroundGravity="center_vertical" 
+	/>
+</RelativeLayout>

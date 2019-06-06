@@ -1,17 +1,16 @@
-﻿using MvvmCross;
-using MvvmCross.Commands;
+﻿using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Phonebook.API.Models;
 using Phonebook.API.Service;
+using Phonebook.Core.ViewModels.Details;
 using System;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace Phonebook.Core.ViewModels
 {
     public class ContactsViewModel : MvxViewModel
     {
-
         #region Fields
         private int _page = 1;
         #endregion
@@ -22,10 +21,12 @@ namespace Phonebook.Core.ViewModels
 
         private IMvxCommand _gettingCommand;
         public IMvxCommand GettingContactsCommand => _gettingCommand ?? (_gettingCommand = new MvxAsyncCommand(GetContacts));
+
+        private IMvxCommand _itemSelectedCommand;
+        public IMvxCommand ItemSelectedCommand => _itemSelectedCommand ?? (_itemSelectedCommand = new MvxAsyncCommand<ItemContact>(NavigateToDetails));
         #endregion
 
         #region Properties
-
         private MvxObservableCollection<ItemContact> _items;
         public MvxObservableCollection<ItemContact> Items
         {
@@ -87,9 +88,11 @@ namespace Phonebook.Core.ViewModels
             await GetContacts();
             IsRefreshing = false;
         }
-        #endregion
 
-        #region Protected
+        private Task<bool> NavigateToDetails(ItemContact item)
+        {
+            return NavigationService.Navigate<DetailsViewModel, Contact>(item._contact); 
+        }
         #endregion
 
         #region Public

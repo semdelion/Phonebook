@@ -10,7 +10,7 @@ namespace Phonebook.API.Models
         [JsonProperty("picture")]
         public Photo Photo { get; set; }
         public Name Name { get; set; }
-        public string Phone { get; }
-        public string Email { get; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
     }
 }

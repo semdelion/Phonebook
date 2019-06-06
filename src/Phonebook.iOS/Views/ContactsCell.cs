@@ -8,7 +8,6 @@ using UIKit;
 namespace Phonebook.iOS.Views
 {
     public partial class ContactsCell : MvxTableViewCell
-
     {
         public static readonly NSString Key = new NSString("ContactsCell");
         public static readonly UINib Nib;

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Linearlayout
+	xmlns:android				="http://schemas.android.com/apk/res/android"
+    xmlns:local					="http://schemas.android.com/apk/res-auto"
+    android:orientation			="vertical"
+	android:fitsSystemWindows	="true"
+    android:layout_width		="match_parent"
+    android:layout_height		="match_parent"
+	android:background			="#394d5b">
+	<android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+		<android.support.v7.widget.Toolbar
+			android:id				="@+id/ContactsViewToolbar"
+			android:background		="@drawable/bar" 
+			android:layout_height	="80dp"
+			android:layout_width	="match_parent">
+			<TextView
+				android:text			="Phonebook"
+				android:textColor		="@android:color/white"
+				android:textSize		="25dp"
+				android:gravity			="center"
+				android:paddingBottom	="12dp"
+				android:layout_width	="match_parent"
+				android:layout_height	="match_parent"
+			/>
+		</android.support.v7.widget.Toolbar>
+	</android.support.design.widget.AppBarLayout>
+	<RelativeLayout
+		android:layout_width	="match_parent"
+		android:layout_height	="match_parent">
+		<MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout
+			local:MvxBind			="RefreshCommand RefreshContactsCommand; Refreshing IsRefreshing"
+			android:layout_height	="match_parent"
+			android:layout_width	="match_parent">
+			<MvvmCross.Droid.Support.V7.RecyclerView.MvxRecyclerView
+				local:MvxBind			="ItemsSource Items; ItemClick ItemSelectedCommand"
+				local:MvxItemTemplate	="@layout/contact_item"
+				android:id				="@+id/recyclerView"
+				android:orientation		="vertical"
+				android:layout_width	="match_parent"
+				android:layout_height	="match_parent"
+			/>
+		</MvvmCross.Droid.Support.V4.MvxSwipeRefreshLayout>
+    </RelativeLayout>
+</Linearlayout>
+
